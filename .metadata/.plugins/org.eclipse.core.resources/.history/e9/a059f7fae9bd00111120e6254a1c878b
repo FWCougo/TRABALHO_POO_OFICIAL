@@ -1,0 +1,12 @@
+package utilidades;
+
+public class PegarResposta {
+
+	public static int Resposta() {
+		
+				
+		
+		return -1;
+	}
+	
+}

@@ -1,0 +1,8 @@
+package pessoas;
+
+public abstract class Pessoa {
+	private String ID;
+	private String nome;
+	private String cpf;
+	private String telefone;
+}

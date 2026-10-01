@@ -1,0 +1,28 @@
+package utilidades;
+import java.util.Scanner;
+
+public class PegarResposta {
+
+	public static int RespostaInt() {
+		
+		System.out.print("\nResposta: ");
+		
+		Scanner sc = new Scanner(System.in);
+				
+		
+		
+		sc.close();
+		return -1;
+	}
+	
+	public static String RespostaString() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		String s = sc.nextLine();	
+		
+		sc.close();
+		return s;
+	}
+	
+}

@@ -1,0 +1,8 @@
+package pessoas;
+import veiculos.Veiculo;
+
+public class Motorista extends Pessoa{
+	private String nCNH;
+	private int situacao;
+	private Veiculo veiculo;
+}

@@ -1,0 +1,139 @@
+package menus;
+import java.util.List;
+import java.util.ArrayList;
+import pessoas.*;
+import utilidades.PegarResposta;
+
+public class Menu {	
+
+	private List<Passageiro> passageiros = new ArrayList<Passageiro>();
+	
+	public void MenuPrincipal() {
+		int opcao = 0;
+		
+		do {
+			System.out.println("=========================================");
+			System.out.println("SISTEMA DE TRANSPORTE");					
+			System.out.println("=========================================");
+			System.out.println("1 - CADASTROS");
+			System.out.println("2 - CORRIDAS");
+			System.out.println("3 - CONSULTAS");
+			System.out.println("4 - LISTAR PASSAGEIROS");
+			System.out.println("0 - SAIR");
+			System.out.println("=========================================");
+			
+			opcao = PegarResposta.RespostaInt();
+			
+			switch(opcao) {
+			case 1:
+				MenuCadastros();
+				break;
+			case 2:
+				MenuCorridas();
+				break;
+			case 3:
+				MenuConsultas();
+				break;
+			case 4:
+				ListarPassageiros();
+				break;
+			case 0:
+				System.exit(0);
+				break;
+			default:
+				System.out.println("RESPOSTA INVÁLIDA");
+				opcao = 0;
+				break;
+			}
+			
+		}
+		while (opcao != 0 || opcao != -1);
+		
+	}
+	
+	private void MenuCadastros() {	
+		int opcao = 0;		
+		
+		do {
+		System.out.println("=========================================");
+		System.out.println("MENU DE CADASTROS");					
+		System.out.println("=========================================");
+		System.out.println("1 - CADASTRAR PASSAGEIRO");
+		System.out.println("2 - CADASTRAR MOTORISTA");
+		System.out.println("3 - CADASTRAR VEICULO");
+		System.out.println("0 - VOLTAR");
+		System.out.println("=========================================");
+		
+		opcao = PegarResposta.RespostaInt();
+		
+		switch(opcao) {
+		case 1:
+			CadastrarPassageiro();
+			break;
+		case 2:
+			
+			break;
+		case 3:
+			break;					
+		}
+		
+		}
+		while(opcao != 0);		
+	}
+	
+	
+	private void CadastrarPassageiro() {
+		
+		String nome;
+		String cpf;
+		String telefone;
+		
+		System.out.println("=========================================");
+		System.out.println("CADASTRAR PASSAGEIRO");
+		System.out.println("=========================================");
+		
+		System.out.print("DIGITE O NOME: ");
+		nome = PegarResposta.RespostaString();
+		
+		System.out.print("DIGITE O CPF: ");
+		cpf = PegarResposta.RespostaString();
+		
+		System.out.print("DIGITE O TELEFONE: ");
+		telefone = PegarResposta.RespostaString();		
+		
+		Passageiro p = new Passageiro(nome, cpf, telefone);
+		
+		passageiros.add(p);
+		
+		MenuPrincipal();
+	}
+	
+	
+	private void ListarPassageiros() {
+		for(int i = 0; i<passageiros.size(); i++) {
+			Passageiro p = passageiros.get(i);
+			System.out.println(p.getNome());			
+		}
+		
+		MenuPrincipal();
+	}
+	
+	
+	
+	
+	private void MenuCorridas() {	
+		
+		
+	}
+	
+	private void MenuConsultas() {	
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+}
