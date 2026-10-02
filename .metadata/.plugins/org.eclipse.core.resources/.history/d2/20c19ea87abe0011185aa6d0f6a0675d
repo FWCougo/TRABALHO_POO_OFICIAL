@@ -4,6 +4,5 @@ import pessoas.*;
 
 public class Corrida {
 	private Passageiro passageiro;
-	private 
 	private Motorista motorista;
 }
