@@ -5,7 +5,7 @@ import java.util.List;
 
 import pessoas.*;
 import utilidades.PegarResposta;
-import veiculos.Veiculo;
+import veiculos.*;
 
 public class Cadastros {
 
@@ -69,12 +69,6 @@ public class Cadastros {
 
 		System.out.print("DIGITE O N° DA CNH DO MOTORISTA: ");
 		nCNH = PegarResposta.RespostaString();
-		
-		
-		
-		
-		
-		
 
 		Motorista m = new Motorista(nome, cpf, telefone, nCNH);
 
@@ -92,24 +86,57 @@ public class Cadastros {
 
 	public void CadastrarVeiculo() {
 
-		String nome;
-
-		System.out.println("\n=========================================");
+		String modelo;
+		Veiculo veiculo;
+		int opcao = 0;
+		boolean valorValido = false;
+		
+		System.out.println("\n===========================================");
 		System.out.println("CADASTRAR VEICULO");
-		System.out.println("=========================================");
+		System.out.println("===========================================");
 
-		System.out.print("DIGITE O NOME DO VEICULO: ");
-		nome = PegarResposta.RespostaString();
+		do {
+			System.out.print("\nSELECIONE O TIPO DO VEICULO\n");
+			System.out.println("1 - CARRO");
+			System.out.println("2 - MOTO");
+			System.out.println("3 - VAN");
+			System.out.println("0 - VOLTAR");
 
-		// Motorista m = new Motorista(nome,cpf,telefone,nCNH);
+			opcao = PegarResposta.RespostaInt();
 
-		// motoristas.add(m);
+			switch (opcao) {
+			case 1:
+				veiculo = new Carro();
+				valorValido=true;
+				break;
+			case 2:
+				veiculo = new Moto();
+				valorValido=true;
+				break;
+			case 3:
+				veiculo = new Van();
+				valorValido=true;
+				break;
+			default:
+				return;
+			}
+
+		} while (!valorValido);
+
+		System.out.print("\nDIGITE O MODELO DO VEICULO\n");
+
+		modelo = PegarResposta.RespostaString();
+		veiculo.setModelo(modelo);
+		
+		veiculos.add(veiculo);
+		
+		System.out.print(veiculo + " foi cadastrado no sistema.");
 	}
 
 	public void ListarVeiculos() {
 		for (int i = 0; i < veiculos.size(); i++) {
 			Veiculo v = veiculos.get(i);
-			System.out.println(i + "-" + v.getNome());
+			System.out.println( (i+1) + " - "+ v.getTipo() + " - " + v.getModelo());
 		}
 	}
 

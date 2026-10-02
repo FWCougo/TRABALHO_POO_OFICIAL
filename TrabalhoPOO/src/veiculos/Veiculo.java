@@ -1,23 +1,24 @@
 package veiculos;
 
 public abstract class Veiculo {
-	private String name;
-	
-	
-	//Constructor
-	public Veiculo(String name) {
-		this.name = name;
-	}
+    private String modelo;
+    
+    public Veiculo() {}
+    
+    public Veiculo(String modelo) {
+    	this.modelo = modelo;
+    }
 
-	
-	//Getter e Setter
-	
-	public String getName() {
-		return name;
-	}
+    //Getter e Setter
+    public void setModelo(String modelo) { this.modelo = modelo; }
+    public String getModelo() { return modelo; }
+    
+    
+    
+    public abstract String getTipo();
 
-
-	public void setName(String name) {
-		this.name = name;
-	} 
+    @Override
+    public String toString() {
+        return getTipo() + " [Modelo: " + modelo +"]";
+    }
 }

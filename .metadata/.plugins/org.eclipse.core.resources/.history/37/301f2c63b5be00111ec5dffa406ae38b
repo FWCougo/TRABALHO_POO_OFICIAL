@@ -1,0 +1,16 @@
+package corridas;
+
+import pessoas.*;
+
+import java.util.Date;
+
+import miscelaneos.*;
+
+public class Corrida {
+	private Passageiro passageiro;
+	private Endereco origem;
+	private Endereco destino;
+	private double distancia;
+	private Motorista motorista;
+	private Date data;
+}
