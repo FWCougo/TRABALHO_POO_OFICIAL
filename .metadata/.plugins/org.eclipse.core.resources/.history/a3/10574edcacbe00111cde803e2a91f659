@@ -8,6 +8,7 @@ public class Motorista extends Pessoa {
 	private Veiculo veiculo;
 
 	// Constructor ---------------------------------------------------------
+	private Veiculo veiculo;
 		
 	public Motorista(String nome, String cpf, String telefone, String nCNH) {
 		super(nome, cpf, telefone);
