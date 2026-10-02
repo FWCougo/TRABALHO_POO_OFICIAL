@@ -13,4 +13,12 @@ public class Corrida {
 	private double distancia;
 	private Motorista motorista;
 	private Date data;
+	
+	
+	
+	
+	public void AvaliarCorrida() {
+		motorista.ReceberNota(0);
+	}
+	
 }
