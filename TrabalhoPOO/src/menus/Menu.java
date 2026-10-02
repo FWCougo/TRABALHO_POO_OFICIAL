@@ -87,8 +87,9 @@ public class Menu {
 			System.out.println("POOBER - MENU DE CORRIDAS");
 			System.out.println("=========================================");
 			System.out.println("1 - SOLICITAR CORRIDA");
-			System.out.println("2 - ");
-			System.out.println("3 - ");
+			System.out.println("2 - CONSULTAR PASSAGEIROS");
+			System.out.println("3 - CONSULTAR MOTORISTAS");
+			System.out.println("4 - CONSULTAR VEICULOS");
 			System.out.println("0 - VOLTAR");
 
 			opcao = PegarResposta.RespostaInt();
@@ -98,10 +99,13 @@ public class Menu {
 					
 				break;
 			case 2:
-				
+				cadastros.ListarPassageiros();
 				break;
 			case 3:
-				
+				cadastros.ListarMotoristas();
+				break;
+			case 4:
+				cadastros.ListarVeiculos();
 				break;
 			}
 
