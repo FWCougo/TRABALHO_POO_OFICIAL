@@ -1,3 +1,2 @@
-2026/10/01-21:31:46.226 3f24 Reusing MANIFEST A:\Faculdade\POO\Trabalho 1\TrabalhoPoo-20261001T220822Z-1-001\TRABALHO_POO_OFICIAL\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
-2026/10/01-21:31:46.227 3f24 Recovering log #3
-2026/10/01-21:31:46.228 3f24 Reusing old log A:\Faculdade\POO\Trabalho 1\TrabalhoPoo-20261001T220822Z-1-001\TRABALHO_POO_OFICIAL\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb/000003.log 
+2026/10/02-18:43:23.671 96c Creating DB C:\Users\Mat\Documents\GitHub\TRABALHO_POO_OFICIAL\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb since it was missing.
+2026/10/02-18:43:23.682 96c Reusing MANIFEST C:\Users\Mat\Documents\GitHub\TRABALHO_POO_OFICIAL\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
