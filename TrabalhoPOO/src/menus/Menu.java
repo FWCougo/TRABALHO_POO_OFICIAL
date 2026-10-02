@@ -1,29 +1,31 @@
 package menus;
-import java.util.List;
-import java.util.ArrayList;
-import pessoas.*;
+
 import utilidades.PegarResposta;
+import cadastros.Cadastros;
 
-public class Menu {	
+public class Menu {
 
-	private List<Passageiro> passageiros = new ArrayList<Passageiro>();
-	
+	Cadastros cadastros;
+
+	public Menu(Cadastros cadastros) {
+		this.cadastros = cadastros;
+	}
+
 	public void MenuPrincipal() {
 		int opcao = 0;
-		
+
 		do {
-			System.out.println("=========================================");
-			System.out.println("SISTEMA DE TRANSPORTE");					
+			System.out.println("\n=========================================");
+			System.out.println("SISTEMA DE TRANSPORTE");
 			System.out.println("=========================================");
 			System.out.println("1 - CADASTROS");
 			System.out.println("2 - CORRIDAS");
 			System.out.println("3 - CONSULTAS");
-			System.out.println("4 - LISTAR PASSAGEIROS");
 			System.out.println("0 - SAIR");
 			
 			opcao = PegarResposta.RespostaInt();
-			
-			switch(opcao) {
+
+			switch (opcao) {
 			case 1:
 				MenuCadastros();
 				break;
@@ -33,105 +35,78 @@ public class Menu {
 			case 3:
 				MenuConsultas();
 				break;
-			case 4:
-				ListarPassageiros();
-				break;
 			case 0:
 				System.exit(0);
 				break;
-			case -1:
-				System.out.println("*****************************************");
-				System.out.println("RESPOSTA INVÁLIDA");
-				System.out.println("*****************************************\n");
+			}
+
+		} while (opcao != 0);
+	}
+
+	private void MenuCadastros() {
+		int opcao = 0;
+
+		do {
+			System.out.println("\n=========================================");
+			System.out.println("MENU DE CADASTROS");
+			System.out.println("=========================================");
+			System.out.println("1 - CADASTRAR PASSAGEIRO");
+			System.out.println("2 - CADASTRAR MOTORISTA");
+			System.out.println("3 - CADASTRAR VEICULO");
+			System.out.println("0 - VOLTAR");
+
+			opcao = PegarResposta.RespostaInt();
+
+			switch (opcao) {
+			case 1:
+				cadastros.CadastrarPassageiro();
+				break;
+			case 2:
+				cadastros.CadastrarMotorista();
+				break;
+			case 3:
+				cadastros.CadastrarVeiculo();
 				break;
 			}
-			
-		}
-		while (opcao != -1);		
+
+		} while (opcao != 0);
+
+		MenuPrincipal();
 	}
-	
-	private void MenuCadastros() {	
-		int opcao = 0;		
-		
+
+	private void MenuCorridas() {
+
+	}
+
+	private void MenuConsultas() {
+		int opcao = 0;
+
 		do {
-		System.out.println("=========================================");
-		System.out.println("MENU DE CADASTROS");					
-		System.out.println("=========================================");
-		System.out.println("1 - CADASTRAR PASSAGEIRO");
-		System.out.println("2 - CADASTRAR MOTORISTA");
-		System.out.println("3 - CADASTRAR VEICULO");
-		System.out.println("0 - VOLTAR");
-		
-		opcao = PegarResposta.RespostaInt();
-		
-		switch(opcao) {
-		case 1:
-			CadastrarPassageiro();
-			break;
-		case 2:
-			
-			break;
-		case 3:
-			break;					
-		}
-		
-		}
-		while(opcao != 0);		
-	}
-	
-	
-	private void CadastrarPassageiro() {
-		
-		String nome;
-		String cpf;
-		String telefone;
-		
-		System.out.println("=========================================");
-		System.out.println("CADASTRAR PASSAGEIRO");
-		System.out.println("=========================================");
-		
-		System.out.println("DIGITE O NOME");
-		nome = PegarResposta.RespostaString();
-		
-		System.out.println("DIGITE O CPF");
-		cpf = PegarResposta.RespostaString();
-		
-		System.out.println("DIGITE O TELEFONE");
-		telefone = PegarResposta.RespostaString();		
-		
-		Passageiro p = new Passageiro(nome, cpf, telefone);
-		
-		passageiros.add(p);
-		
+			System.out.println("\n=========================================");
+			System.out.println("MENU DE CONSULTAS");
+			System.out.println("=========================================");
+			System.out.println("1 - LISTAR CORRIDAS");
+			System.out.println("2 - CONSULTAR PASSAGEIROS");
+			System.out.println("3 - CONSULTAR MOTORISTA");
+			System.out.println("0 - VOLTAR");
+
+			opcao = PegarResposta.RespostaInt();
+
+			switch (opcao) {
+			case 1:
+					opcao=0; //MUDAR PARA LISTAR CORRIDAS
+				break;
+			case 2:
+				cadastros.ListarPassageiros();
+				break;
+			case 3:
+				cadastros.ListarMotoristas();
+				break;
+			}
+
+		} while (opcao != 0);
+
 		MenuPrincipal();
 	}
-	
-	
-	private void ListarPassageiros() {
-		for(int i = 0; i<passageiros.size(); i++) {
-			Passageiro p = passageiros.get(i);
-			System.out.println(p.getNome());			
-		}
-		
-		MenuPrincipal();
-	}
-	
-	
-	
-	
-	private void MenuCorridas() {	
-		
-		
-	}
-	
-	private void MenuConsultas() {	
-		
-		
-	}
-	
-	
-	
-	
-	
-	
+
 }

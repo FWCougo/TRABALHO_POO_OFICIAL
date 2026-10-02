@@ -1,35 +1,32 @@
 package utilidades;
+
 import java.util.Scanner;
 
 public class PegarResposta {
 
 	private static Scanner sc = new Scanner(System.in);
-	
+
 	public static int RespostaInt() {
-		
+
+		int r = -1;
+
 		System.out.print("\nResposta: ");
-		
-		String resposta =  sc.nextLine();		
-		
-		System.out.print("\n");	
-		
-		if(resposta.matches("[0-9]+")) {
-			return Integer.parseInt(resposta);
+
+		String rString = sc.nextLine();
+
+		if (rString.matches("[0-9]+")) {
+			r = Integer.parseInt(rString);
+			return r;
+		} else {
+			System.out.println("********** RESPOSTA INVÁLIDA **********");
+			return r;
 		}
-		else {
-			return -1;
-		}			
+
 	}
-	
+
 	public static String RespostaString() {
-		
-		System.out.print("\nResposta: ");
-		
-		String s = sc.nextLine();	
-		
-		System.out.print("\n");	
-		
+		String s = sc.nextLine();
 		return s;
 	}
-	
+
 }

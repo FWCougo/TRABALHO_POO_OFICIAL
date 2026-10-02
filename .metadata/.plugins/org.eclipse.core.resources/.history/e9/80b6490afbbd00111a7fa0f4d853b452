@@ -1,0 +1,17 @@
+package principal;
+
+import cadastros.*;
+import menus.*;
+
+public class Principal {
+
+	public static void main(String[] args) {		
+		
+		Menu menu = new Menu();
+		CadastroDePassageiros cPassageiros = new CadastroDePassageiros();
+		
+		menu.MenuPrincipal();
+		
+	}
+
+}

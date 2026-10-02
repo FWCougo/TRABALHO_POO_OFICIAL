@@ -1,15 +1,19 @@
 package principal;
 
+import cadastros.*;
 import menus.*;
 
 public class Principal {
 
 	public static void main(String[] args) {		
 		
-		Menu menu = new Menu();
+		Cadastros cadastros = new Cadastros();
+		Menu menu = new Menu(cadastros);
 		
 		menu.MenuPrincipal();
 		
 	}
+	
+	
 
 }

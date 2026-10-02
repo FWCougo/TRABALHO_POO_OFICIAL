@@ -1,0 +1,34 @@
+package cadastros;
+
+import pessoas.Passageiro;
+import utilidades.PegarResposta;
+
+public class CadastroDePassageiros {
+
+	private void CadastrarPassageiro() {
+		
+		String nome;
+		String cpf;
+		String telefone;
+		
+		System.out.println("=========================================");
+		System.out.println("CADASTRAR PASSAGEIRO");
+		System.out.println("=========================================");
+		
+		System.out.println("DIGITE O NOME");
+		nome = PegarResposta.RespostaString();
+		
+		System.out.println("DIGITE O CPF");
+		cpf = PegarResposta.RespostaString();
+		
+		System.out.println("DIGITE O TELEFONE");
+		telefone = PegarResposta.RespostaString();		
+		
+		Passageiro p = new Passageiro(nome, cpf, telefone);
+		
+		passageiros.add(p);
+		
+		MenuPrincipal();
+	}
+
+}
