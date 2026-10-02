@@ -1,0 +1,13 @@
+package veiculos;
+
+public class Moto extends Veiculo {
+    public Moto(String modelo) {
+    	super(modelo); 
+    	}
+    @Override public String getTipo() {
+    	return "Moto"; 
+    	}
+    @Override public double calcularTarifaBase(double distanciaKm) {
+        return 3.00 + (1.50 * distanciaKm);
+    }
+}
