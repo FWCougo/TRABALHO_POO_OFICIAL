@@ -1,13 +1,16 @@
 package veiculos;
 
-
-
 public class Carro extends Veiculo {
-    public Carro(String modelo) {
-    	super(modelo);
-    	}
-    @Override public String getTipo() { 
-    	return "Carro";
-    	}
+	
+	public Carro() {}
+	
+	public Carro(String modelo) {
+		super(modelo);
+	}
+
+	@Override
+	public String getTipo() {
+		return "Carro";
+	}
 
 }

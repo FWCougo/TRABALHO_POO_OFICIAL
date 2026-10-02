@@ -4,9 +4,9 @@ import veiculos.Veiculo;
 public class Motorista extends Pessoa {
 	private String nCNH;
 	private int situacao;
-
 	private Veiculo veiculo;
-
+	private float mediaAvaliacao;
+	
 	// Constructor ---------------------------------------------------------
 		
 	public Motorista(String nome, String cpf, String telefone, String nCNH) {
@@ -30,8 +30,15 @@ public class Motorista extends Pessoa {
 	public void setSituacao(int situacao) {
 		this.situacao = situacao;
 	}
+	private float GetMediaAvaliacao() { //AQUI PRECISA FAZER UM CALCULO DE MEDIA SEILA
+		return mediaAvaliacao;
+	}
 
 	// Methods ---------------------------------------------------------
+	public void ReceberNota(float nota) {
+		
+	}
+	
 	public String MostrarSituacao() {
 		switch (getSituacao()) {
 		case 1:

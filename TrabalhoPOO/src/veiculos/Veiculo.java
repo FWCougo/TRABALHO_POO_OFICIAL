@@ -2,14 +2,19 @@ package veiculos;
 
 public abstract class Veiculo {
     private String modelo;
-    private String placa;
-
+    
+    public Veiculo() {}
+    
     public Veiculo(String modelo) {
-
     	this.modelo = modelo;
     }
 
+    //Getter e Setter
+    public void setModelo(String modelo) { this.modelo = modelo; }
     public String getModelo() { return modelo; }
+    
+    
+    
     public abstract String getTipo();
 
     @Override
