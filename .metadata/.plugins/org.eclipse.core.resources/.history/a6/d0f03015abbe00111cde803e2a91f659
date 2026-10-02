@@ -11,7 +11,6 @@ public class Cadastros {
 
 	private List<Passageiro> passageiros = new ArrayList<Passageiro>();
 	private List<Motorista> motoristas = new ArrayList<Motorista>();
-	private List<Veiculo> veiculos = new ArrayList<Veiculo>();
 
 	public void CadastrarPassageiro() {
 
@@ -107,9 +106,9 @@ public class Cadastros {
 	}
 
 	public void ListarVeiculos() {
-		for (int i = 0; i < veiculos.size(); i++) {
-			Veiculo v = veiculos.get(i);
-			System.out.println(i + "-" + v.getNome());
+		for (int i = 0; i < motoristas.size(); i++) {
+			Motorista m = motoristas.get(i);
+			System.out.println(i + "-" + m.getNome());
 		}
 	}
 
