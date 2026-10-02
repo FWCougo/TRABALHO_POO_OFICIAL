@@ -16,7 +16,7 @@ public class Menu {
 
 		do {
 			System.out.println("\n=========================================");
-			System.out.println("SISTEMA DE TRANSPORTE");
+			System.out.println("POOBER - MENU PRINCIPAL");
 			System.out.println("=========================================");
 			System.out.println("1 - CADASTROS");
 			System.out.println("2 - CORRIDAS");
@@ -48,7 +48,7 @@ public class Menu {
 
 		do {
 			System.out.println("\n=========================================");
-			System.out.println("MENU DE CADASTROS");
+			System.out.println("POOBER - MENU DE CADASTROS");
 			System.out.println("=========================================");
 			System.out.println("1 - CADASTRAR PASSAGEIRO");
 			System.out.println("2 - CADASTRAR MOTORISTA");
@@ -75,6 +75,7 @@ public class Menu {
 	}
 
 	private void MenuCorridas() {
+		
 
 	}
 
@@ -83,24 +84,24 @@ public class Menu {
 
 		do {
 			System.out.println("\n=========================================");
-			System.out.println("MENU DE CONSULTAS");
+			System.out.println("POOBER - MENU DE CORRIDAS");
 			System.out.println("=========================================");
-			System.out.println("1 - LISTAR CORRIDAS");
-			System.out.println("2 - CONSULTAR PASSAGEIROS");
-			System.out.println("3 - CONSULTAR MOTORISTA");
+			System.out.println("1 - SOLICITAR CORRIDA");
+			System.out.println("2 - ");
+			System.out.println("3 - ");
 			System.out.println("0 - VOLTAR");
 
 			opcao = PegarResposta.RespostaInt();
 
 			switch (opcao) {
 			case 1:
-					opcao=0; //MUDAR PARA LISTAR CORRIDAS
+					
 				break;
 			case 2:
-				cadastros.ListarPassageiros();
+				
 				break;
 			case 3:
-				cadastros.ListarMotoristas();
+				
 				break;
 			}
 

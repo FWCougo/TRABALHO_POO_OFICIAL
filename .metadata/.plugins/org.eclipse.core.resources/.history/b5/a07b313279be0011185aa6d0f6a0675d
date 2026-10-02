@@ -1,0 +1,57 @@
+package pessoas;
+import veiculos.Veiculo;
+
+public class Motorista extends Pessoa{
+	private String nCNH;
+	private int situacao;
+	private Veiculo veiculo;
+		
+	//Constructor
+	public Motorista(String nome, String cpf, String telefone, String nCNH) {
+		super(nome,cpf,telefone);
+		this.nCNH = nCNH;
+	}
+	
+	public Motorista(String nome, String cpf, String telefone, String nCNH, Veiculo veiculo) {
+		super(nome,cpf,telefone);
+		this.nCNH = nCNH;
+		this.veiculo = veiculo;
+	}
+
+	//Getter e Setter	
+	public String getnCNH() {
+		return nCNH;
+	}
+
+	public void setnCNH(String nCNH) {
+		this.nCNH = nCNH;
+	}
+
+	public int getSituacao() {
+		return situacao;
+	}
+
+	public void setSituacao(int situacao) {
+		this.situacao = situacao;
+	}
+
+	public Veiculo getVeiculo() {
+		return veiculo;
+	}
+
+	public void setVeiculo(Veiculo veiculo) {
+		this.veiculo = veiculo;
+	}
+	
+	public String MostrarSituacao() {
+		switch(getSituacao()) {
+		case 1:
+			return "Indisponivel";
+		default:
+			return "Disponivel";			
+		}
+	}
+	
+	
+	
+}

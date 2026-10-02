@@ -1,0 +1,7 @@
+package corridas;
+
+import pessoas.*;
+
+public class Corrida {
+	private
+}
