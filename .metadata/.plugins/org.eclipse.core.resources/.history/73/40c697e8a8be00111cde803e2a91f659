@@ -68,12 +68,6 @@ public class Cadastros {
 
 		System.out.print("DIGITE O N° DA CNH DO MOTORISTA: ");
 		nCNH = PegarResposta.RespostaString();
-		
-		
-		
-		
-		
-		
 
 		Motorista m = new Motorista(nome, cpf, telefone, nCNH);
 
@@ -93,7 +87,7 @@ public class Cadastros {
 
 		String nome;
 
-		System.out.println("\n=========================================");
+		System.out.println("=========================================");
 		System.out.println("CADASTRAR VEICULO");
 		System.out.println("=========================================");
 

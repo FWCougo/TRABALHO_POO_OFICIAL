@@ -93,7 +93,7 @@ public class Cadastros {
 
 		String nome;
 
-		System.out.println("\n=========================================");
+		System.out.println("=========================================");
 		System.out.println("CADASTRAR VEICULO");
 		System.out.println("=========================================");
 
