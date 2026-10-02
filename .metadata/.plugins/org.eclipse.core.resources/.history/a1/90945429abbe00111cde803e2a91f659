@@ -108,8 +108,8 @@ public class Cadastros {
 
 	public void ListarVeiculos() {
 		for (int i = 0; i < veiculos.size(); i++) {
-			Veiculo v = veiculos.get(i);
-			System.out.println(i + "-" + v.getNome());
+			Veiculo m = veiculos.get(i);
+			System.out.println(i + "-" + m.getNome());
 		}
 	}
 
