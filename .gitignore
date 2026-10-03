@@ -7,3 +7,4 @@
 
 # Permitir todo o conteúdo de src e bin
 !src/**
+/.metadata
