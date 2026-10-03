@@ -1,1 +1,11 @@
-/bin/
+
+# Ignorar todos os arquivos e pastas
+*
+
+# Permitir as pastas src e bin
+!src/
+!bin/
+
+# Permitir todo o conteúdo de src e bin
+!src/**
+!bin/**
