@@ -1,11 +1,10 @@
 
-# Ignorar todos os arquivos e pastas
-*
+# Ignorar tudo na raiz do projeto
+/*
 
-# Permitir as pastas src e bin
-!src/
-!bin/
+# Permitir somente src e bin
+!/src/
+!/bin/
 
-# Permitir todo o conteúdo de src e bin
-!src/**
-!bin/**
+# Permitir o próprio .gitignore
+!/.gitignore
