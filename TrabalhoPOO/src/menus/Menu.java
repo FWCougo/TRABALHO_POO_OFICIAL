@@ -45,7 +45,6 @@ public class Menu {
 
 		} while (opcao != 0);
 	}
-
 	private void MenuCadastros() {
 		int opcao = 0;
 
@@ -76,10 +75,8 @@ public class Menu {
 
 		MenuPrincipal();
 	}
-
 	private void MenuCorridas() {
 		int opcao = 0;
-
 		do {
 			System.out.println("=========================================");
 			System.out.println("POOBER - MENU DE CORRIDAS");
