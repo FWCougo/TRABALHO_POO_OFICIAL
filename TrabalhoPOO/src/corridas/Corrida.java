@@ -12,10 +12,7 @@ public class Corrida {
 	private Endereco destino;
 	private float distancia;
 	private Motorista motorista;
-	private Date data;
-	
-	
-	
+	private Date data;	
 	
 	public Corrida(float distancia) {
 	    this.distancia = distancia;
@@ -24,8 +21,6 @@ public class Corrida {
 	public float getDistancia() {
 	       return this.distancia;
 	}
-	
-	
 	
 	
 	public void AvaliarCorrida() {
