@@ -1,6 +1,0 @@
-package pessoas;
-
-public class Motorista extends Pessoa{
-	private String nCNH;
-	private int situacao;
-}
