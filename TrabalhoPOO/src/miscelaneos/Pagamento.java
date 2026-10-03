@@ -19,13 +19,12 @@ public class Pagamento {
 
 	public Pagamento() {}
 	
-	
-	public float calcularTarifaDistancia(Corrida distancia, Veiculo SEGUNDATARIFA, Veiculo TARIFABASE) {
 
-	 return (Veiculo.SEGUNDATARIFA * Corrida.getDistancia()) + Veiculo.TAXABASE;
-	}
+	//opcao ultima:
+	public float calcularTarifaDistancia(Veiculo veiculo, Corrida corrida) {
+        return ((veiculo.getSegundaTarifa() * corrida.getDistancia()) + veiculo.getTarifaBase());
+    }
 	
+	//OBS: preciso conseguir pegar o valor da distancia ainda...
 }
 
-
-//SEILAOQUE

@@ -2,8 +2,13 @@ package veiculos;
 
 public abstract class Veiculo {
     private String modelo;
-    protected final float TARIFABASE;
-    protected final float SEGUNDATARIFA;
+
+    
+//fazendo as tarifas 1 e 2:    
+    public abstract float getTarifaBase();
+    
+    public abstract float getSegundaTarifa();
+//..........
     
     public Veiculo() {}
     
@@ -23,7 +28,6 @@ public abstract class Veiculo {
     public String toString() {
         return getTipo() + " [Modelo: " + modelo +"]";
     }
+}
     
-   
-}
-}
+

@@ -2,8 +2,8 @@ package veiculos;
 
 public class Carro extends Veiculo {
 	
-	private final float TARIFABASE = 5.00f;
-	private final float SEGUNDATARIFA = 2.00f;
+	protected final float TARIFABASE = 5.00f;
+	protected final float SEGUNDATARIFA = 2.00f;
 	
 	public Carro() {}
 	
@@ -15,5 +15,17 @@ public class Carro extends Veiculo {
 	public String getTipo() {
 		return "Carro";
 	}
+	
+	
+	//...
+	 @Override
+	    protected float getTarifaBase() {
+	        return 5.0f;
+	    }
+	    
+	    @Override
+	    protected float getSegundaTarifa() {
+	        return 2.0f;
+	    }
 
 }

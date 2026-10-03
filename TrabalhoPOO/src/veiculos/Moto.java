@@ -1,10 +1,6 @@
 package veiculos;
 
-public class Moto extends Veiculo {
-	
-	private final float TARIFABASE = 3.00f;
-	private final float SEGUNDATARIFA = 1.50f;
-	
+public class Moto extends Veiculo {	
 	
     public Moto() {
     	}
@@ -15,4 +11,15 @@ public class Moto extends Veiculo {
     	return "Moto"; 
     	}
 
+    //....
+    @Override
+    public float getTarifaBase() {
+        return 3.0f;
+    }
+    
+    @Override
+    public float getSegundaTarifa() {
+        return 2.5f;
+    }
+    
 }
