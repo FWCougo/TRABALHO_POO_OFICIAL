@@ -22,7 +22,7 @@ public class Pagamento {
 
 	//opcao ultima:
 	public float calcularTarifaDistancia(Veiculo veiculo, Corrida corrida) {
-        return ((veiculo.getSegundaTarifa() * corrida.getDistancia()) + veiculo.getTarifaBase());
+        return veiculo.getTarifaBase() + (veiculo.getSegundaTarifa() * corrida.getDistancia());
     }
 	
 	//OBS: preciso conseguir pegar o valor da distancia ainda...
