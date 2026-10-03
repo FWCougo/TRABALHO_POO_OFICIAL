@@ -14,16 +14,15 @@ import corridas.*;
 //DINEHIRO: 0%    PIX: - 5%  CARTÃO: + 3%
 
 public class Pagamento {
+	
+	private float tarifaDistancia = calcularTarifaDistancia();
 
 	public Pagamento() {}
 	
-	public float calcularTarifaDistancia(){
-		
-	}
 	
-	public float calcularTarifaDistancia(Corridas distancia ) {
-	 
-	 return Veiculo.TAXABASE + corrida.getDistancia();
+	public float calcularTarifaDistancia(Corrida distancia, Veiculo SEGUNDATARIFA, Veiculo TARIFABASE) {
+
+	 return (Veiculo.SEGUNDATARIFA * Corrida.getDistancia()) + Veiculo.TAXABASE;
 	}
 	
 }

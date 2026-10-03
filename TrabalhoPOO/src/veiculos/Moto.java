@@ -2,8 +2,8 @@ package veiculos;
 
 public class Moto extends Veiculo {
 	
-	final float TARIFABASE = 3.00f;
-	final float SEGUNDATARIFA = 1.50f;
+	private final float TARIFABASE = 3.00f;
+	private final float SEGUNDATARIFA = 1.50f;
 	
 	
     public Moto() {

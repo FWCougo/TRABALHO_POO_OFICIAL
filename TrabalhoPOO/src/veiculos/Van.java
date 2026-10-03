@@ -2,8 +2,9 @@ package veiculos;
 
 public class Van extends Veiculo{
 	
-	final float TARIFABASE = 8.00f;
-	final float SEGUNDATARIFA = 3.00f;
+	private final float TARIFABASE = 8.00f;
+	private final float SEGUNDATARIFA = 3.00f;
+	
     public Van() {
 	}
 
@@ -11,3 +12,4 @@ public class Van extends Veiculo{
     	return "Van"; 
     	}
 }
+
