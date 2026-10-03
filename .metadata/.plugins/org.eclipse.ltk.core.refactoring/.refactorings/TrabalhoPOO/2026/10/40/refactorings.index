@@ -2,3 +2,7 @@
 1790901730029	Move method
 1790902133280	Rename type 'CadastroDePassageiros'
 1790902422889	Move method
+1790989847533	Rename local variable 'corrida'
+1790990611287	Rename field 'corridas'
+1790991025113	Rename field 'corridasIniciadas'
+1790991087029	Rename field 'corridasAceitar'

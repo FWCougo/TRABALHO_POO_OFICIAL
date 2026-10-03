@@ -2,14 +2,16 @@ package menus;
 
 import utilidades.*;
 import cadastros.Cadastros;
-import corrida.*;
+import corridas.*;
 
 public class Menu {
 
 	Cadastros cadastros;
+	GerenciarCorridas genCorridas;
 
-	public Menu(Cadastros cadastros) {
+	public Menu(Cadastros cadastros, GerenciarCorridas gerenciadorCorrida) {
 		this.cadastros = cadastros;
+		this.genCorridas=gerenciadorCorrida;
 	}
 
 	public void MenuPrincipal() {
@@ -23,7 +25,7 @@ public class Menu {
 			System.out.println("2 - CORRIDAS");
 			System.out.println("3 - CONSULTAS");
 			System.out.println("0 - SAIR");
-			
+
 			opcao = PegarResposta.RespostaInt();
 
 			switch (opcao) {
@@ -94,22 +96,22 @@ public class Menu {
 
 			switch (opcao) {
 			case 1:
-					Corrida.SolicitarCorrida();
+				genCorridas.SolicitarCorrida();
 				break;
 			case 2:
-				Corrida.AceitaCorrida();
+				genCorridas.AceitarCorrida();
 				break;
 			case 3:
-				Corrida.IniciaCorrida();
+				genCorridas.IniciarCorrida();
 				break;
 			case 4:
-				Corrida.FinalizaCorrida();
+				//genCorridas.FinalizaCorrida();
 				break;
 			case 5:
-				Corrida.CancelaCorrida();
+				//genCorridas.CancelaCorrida();
 				break;
 			case 6:
-				Corrida.AvaliarCorrida();
+				//genCorridas.AvaliarCorrida();
 				break;
 
 			}
@@ -137,7 +139,7 @@ public class Menu {
 
 			switch (opcao) {
 			case 1:
-					
+
 				break;
 			case 2:
 				cadastros.ListarPassageiros();
