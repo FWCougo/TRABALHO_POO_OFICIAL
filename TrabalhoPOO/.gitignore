@@ -1,1 +1,10 @@
-/bin/
+
+# Ignorar tudo na raiz do projeto
+/*
+
+# Permitir somente src e bin
+!/src/
+!/bin/
+
+# Permitir o próprio .gitignore
+!/.gitignore

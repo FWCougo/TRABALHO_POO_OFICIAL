@@ -15,4 +15,18 @@ import corridas.*;
 
 public class Pagamento {
 
+	public Pagamento() {}
+	
+	public float calcularTarifaDistancia(){
+		
+	}
+	
+	public float calcularTarifaDistancia(Corridas distancia ) {
+	 
+	 return Veiculo.TAXABASE + corrida.getDistancia();
+	}
+	
 }
+
+
+//SEILAOQUE
