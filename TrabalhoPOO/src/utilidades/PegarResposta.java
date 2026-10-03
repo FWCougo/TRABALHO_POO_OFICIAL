@@ -23,6 +23,23 @@ public class PegarResposta {
 		}
 
 	}
+	
+	public static Float RespostaFloat() {
+		
+		float r = -1;
+		
+		System.out.print("\nResposta: ");
+		
+		String rString = sc.nextLine();
+
+		if (rString.matches("[0-9]+")) {
+			r = Float.parseFloat(rString);
+			return r;
+		} else {
+			System.out.println("********** RESPOSTA INVÁLIDA **********");
+			return r;
+		}
+	}
 
 	public static String RespostaString() {
 		String s = sc.nextLine();

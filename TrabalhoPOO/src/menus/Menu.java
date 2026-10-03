@@ -1,14 +1,17 @@
 package menus;
 
-import utilidades.PegarResposta;
+import utilidades.*;
 import cadastros.Cadastros;
+import corridas.*;
 
 public class Menu {
 
 	Cadastros cadastros;
+	GerenciarCorridas genCorridas;
 
-	public Menu(Cadastros cadastros) {
+	public Menu(Cadastros cadastros, GerenciarCorridas gerenciadorCorrida) {
 		this.cadastros = cadastros;
+		this.genCorridas=gerenciadorCorrida;
 	}
 
 	public void MenuPrincipal() {
@@ -22,7 +25,7 @@ public class Menu {
 			System.out.println("2 - CORRIDAS");
 			System.out.println("3 - CONSULTAS");
 			System.out.println("0 - SAIR");
-			
+
 			opcao = PegarResposta.RespostaInt();
 
 			switch (opcao) {
@@ -75,7 +78,47 @@ public class Menu {
 	}
 
 	private void MenuCorridas() {
-		
+		int opcao = 0;
+
+		do {
+			System.out.println("=========================================");
+			System.out.println("POOBER - MENU DE CORRIDAS");
+			System.out.println("=========================================");
+			System.out.println("1 - SOLICITAR CORRIDA");
+			System.out.println("2 - ACEITAR CORRIDA");
+			System.out.println("3 - INICIAR CORRIDA");
+			System.out.println("4 - FINALIZAR CORRIDA");
+			System.out.println("5 - CANCELAR CORRIDA");
+			System.out.println("6 - AVALIAR CORRIDA");
+			System.out.println("0 - VOLTAR");
+
+			opcao = PegarResposta.RespostaInt();
+
+			switch (opcao) {
+			case 1:
+				genCorridas.SolicitarCorrida();
+				break;
+			case 2:
+				genCorridas.AceitarCorrida();
+				break;
+			case 3:
+				genCorridas.IniciarCorrida();
+				break;
+			case 4:
+				//genCorridas.FinalizaCorrida();
+				break;
+			case 5:
+				//genCorridas.CancelaCorrida();
+				break;
+			case 6:
+				//genCorridas.AvaliarCorrida();
+				break;
+
+			}
+
+		} while (opcao != 0);
+
+		MenuPrincipal();
 
 	}
 
@@ -84,9 +127,9 @@ public class Menu {
 
 		do {
 			System.out.println("\n=========================================");
-			System.out.println("POOBER - MENU DE CORRIDAS");
+			System.out.println("POOBER - MENU DE CONSULTAS");
 			System.out.println("=========================================");
-			System.out.println("1 - SOLICITAR CORRIDA");
+			System.out.println("1 - LISTAR CORRIDAS");
 			System.out.println("2 - CONSULTAR PASSAGEIROS");
 			System.out.println("3 - CONSULTAR MOTORISTAS");
 			System.out.println("4 - CONSULTAR VEICULOS");
@@ -96,7 +139,7 @@ public class Menu {
 
 			switch (opcao) {
 			case 1:
-					
+
 				break;
 			case 2:
 				cadastros.ListarPassageiros();

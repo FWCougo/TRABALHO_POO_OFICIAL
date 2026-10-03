@@ -8,7 +8,8 @@ public class Principal {
 	public static void main(String[] args) {		
 		
 		Cadastros cadastros = new Cadastros();
-		Menu menu = new Menu(cadastros);
+		GerenciarCorridas gerenciadorCorrida = new GerenciarCorridas();
+		Menu menu = new Menu(cadastros, gerenciadorCorrida);
 		
 		menu.MenuPrincipal();
 		
