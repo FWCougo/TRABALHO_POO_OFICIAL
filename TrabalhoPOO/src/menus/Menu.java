@@ -3,6 +3,7 @@ package menus;
 import utilidades.*;
 import cadastros.Cadastros;
 import corridas.*;
+import pessoas.*;
 
 public class Menu {
 
@@ -93,7 +94,11 @@ public class Menu {
 
 			switch (opcao) {
 			case 1:
-				genCorridas.SolicitarCorrida();
+				cadastros.ListarPassageiros();
+				System.out.println("\nDigite o ID do Passageiro que deseja");
+				int index = PegarResposta.RespostaInt();
+				Passageiro p = cadastros.PegarPassageiro(index);
+				genCorridas.SolicitarCorrida(p);
 				break;
 			case 2:
 				genCorridas.AceitarCorrida();
@@ -118,7 +123,6 @@ public class Menu {
 		MenuPrincipal();
 
 	}
-
 	private void MenuConsultas() {
 		int opcao = 0;
 

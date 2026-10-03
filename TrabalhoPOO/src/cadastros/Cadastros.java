@@ -13,6 +13,8 @@ public class Cadastros {
 	private List<Motorista> motoristas = new ArrayList<Motorista>();
 	private List<Veiculo> veiculos = new ArrayList<Veiculo>();
 
+//----------------------------------------------------------------------------------
+	
 	public void CadastrarPassageiro() {
 		String nome;
 		String cpf;
@@ -39,13 +41,19 @@ public class Cadastros {
 	public void ListarPassageiros() {
 		for (int i = 0; i < passageiros.size(); i++) {
 			Passageiro p = passageiros.get(i);
-			System.out.println(i + "-" + p.getNome());
+			System.out.println((i+1) + "-" + p.getNome());
 		}
+	}
+	public Passageiro PegarPassageiro(int i) {		
+		if(i <= passageiros.size()) 
+		{			
+			return null;
+		}
+		return passageiros.get(i-1);
 	}
 
 //----------------------------------------------------------------------------------
 	public void CadastrarMotorista() {
-
 		String nome;
 		String cpf;
 		String telefone;
@@ -72,7 +80,6 @@ public class Cadastros {
 
 		motoristas.add(m);
 	}
-
 	public void ListarMotoristas() {
 		for (int i = 0; i < motoristas.size(); i++) {
 			Motorista m = motoristas.get(i);
@@ -130,7 +137,6 @@ public class Cadastros {
 		
 		System.out.print(veiculo + " foi cadastrado no sistema.");
 	}
-
 	public void ListarVeiculos() {
 		for (int i = 0; i < veiculos.size(); i++) {
 			Veiculo v = veiculos.get(i);

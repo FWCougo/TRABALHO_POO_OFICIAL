@@ -11,8 +11,7 @@ public class Principal {
 		GerenciarCorridas gerenciadorCorrida = new GerenciarCorridas();
 		Menu menu = new Menu(cadastros, gerenciadorCorrida);
 		
-		menu.MenuPrincipal();
-		
+		menu.MenuPrincipal();		
 	}
 	
 	

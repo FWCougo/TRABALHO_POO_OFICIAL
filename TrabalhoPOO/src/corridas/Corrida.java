@@ -14,22 +14,30 @@ public abstract class Corrida {
 	private Motorista motorista;
 	private Date data;	
 	
-	public Corrida(float distancia) {
-	    this.distancia = distancia;
-	    estado=1;
-	}
-	
+	public Corrida(float dist) {
+		this.distancia = dist;
+	}	
+	public Corrida(Passageiro passageiro) {
+		this.passageiro = passageiro;
+	}	
+
+	//Getter e Setter
 	public float getDistancia() {
 	       return this.distancia;
-
-	}	
+	}		
+	public void SetPassageiro(Passageiro p) {
+		this.passageiro = p; 
+	}
+	public String GetPassageiro() {
+		return passageiro.getNome();
+	}
+	
+	
+	
+	
 	
 	public void AvaliarCorrida() {
 		motorista.ReceberNota(0);
-	}
-	
-	public int GetEstado() {
-		return this.estado;
 	}
 	
 	@Override
