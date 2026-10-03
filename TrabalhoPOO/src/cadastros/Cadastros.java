@@ -14,7 +14,6 @@ public class Cadastros {
 	private List<Veiculo> veiculos = new ArrayList<Veiculo>();
 
 	public void CadastrarPassageiro() {
-
 		String nome;
 		String cpf;
 		String telefone;
@@ -37,7 +36,6 @@ public class Cadastros {
 		passageiros.add(p);
 
 	}
-
 	public void ListarPassageiros() {
 		for (int i = 0; i < passageiros.size(); i++) {
 			Passageiro p = passageiros.get(i);

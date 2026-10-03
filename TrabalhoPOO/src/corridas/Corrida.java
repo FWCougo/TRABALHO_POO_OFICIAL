@@ -6,7 +6,7 @@ import java.util.Date;
 
 import miscelaneos.*;
 
-public class Corrida {
+public abstract class Corrida {
 	private Passageiro passageiro;
 	private Endereco origem;
 	private Endereco destino;
@@ -16,15 +16,24 @@ public class Corrida {
 	
 	public Corrida(float distancia) {
 	    this.distancia = distancia;
+	    estado=1;
 	}
 	
 	public float getDistancia() {
 	       return this.distancia;
-	}
-	
+
+	}	
 	
 	public void AvaliarCorrida() {
 		motorista.ReceberNota(0);
 	}
 	
+	public int GetEstado() {
+		return this.estado;
+	}
+	
+	@Override
+	public String toString() {
+		return "Corrida";
+	}
 }
