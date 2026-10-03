@@ -1,7 +1,8 @@
 package menus;
 
-import utilidades.PegarResposta;
+import utilidades.*;
 import cadastros.Cadastros;
+import corrida.*;
 
 public class Menu {
 
@@ -75,7 +76,47 @@ public class Menu {
 	}
 
 	private void MenuCorridas() {
-		
+		int opcao = 0;
+
+		do {
+			System.out.println("=========================================");
+			System.out.println("POOBER - MENU DE CORRIDAS");
+			System.out.println("=========================================");
+			System.out.println("1 - SOLICITAR CORRIDA");
+			System.out.println("2 - ACEITAR CORRIDA");
+			System.out.println("3 - INICIAR CORRIDA");
+			System.out.println("4 - FINALIZAR CORRIDA");
+			System.out.println("5 - CANCELAR CORRIDA");
+			System.out.println("6 - AVALIAR CORRIDA");
+			System.out.println("0 - VOLTAR");
+
+			opcao = PegarResposta.RespostaInt();
+
+			switch (opcao) {
+			case 1:
+					Corrida.SolicitarCorrida();
+				break;
+			case 2:
+				Corrida.AceitaCorrida();
+				break;
+			case 3:
+				Corrida.IniciaCorrida();
+				break;
+			case 4:
+				Corrida.FinalizaCorrida();
+				break;
+			case 5:
+				Corrida.CancelaCorrida();
+				break;
+			case 6:
+				Corrida.AvaliarCorrida();
+				break;
+
+			}
+
+		} while (opcao != 0);
+
+		MenuPrincipal();
 
 	}
 
@@ -84,9 +125,9 @@ public class Menu {
 
 		do {
 			System.out.println("\n=========================================");
-			System.out.println("POOBER - MENU DE CORRIDAS");
+			System.out.println("POOBER - MENU DE CONSULTAS");
 			System.out.println("=========================================");
-			System.out.println("1 - SOLICITAR CORRIDA");
+			System.out.println("1 - LISTAR CORRIDAS");
 			System.out.println("2 - CONSULTAR PASSAGEIROS");
 			System.out.println("3 - CONSULTAR MOTORISTAS");
 			System.out.println("4 - CONSULTAR VEICULOS");
